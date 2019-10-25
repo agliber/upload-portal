@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+// import BoxSDK from 'box-node-sdk';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+
+  // Get your own user object from the Box API
+  // All client methods return a promise that resolves to the results of the API call,
+  // or rejects when an error occurs
+
+  callApi = async () => {
+    const response = await fetch('/.netlify/functions/getCurrentUserId');
+    const body = await response.json();
+    if (response.status !== 200) throw Error(body.message);
+    return body;
+  };
+
+  render(){
+    return (
+      <div className="App">
+        <button onClick={this.callApi}> Test Get </button>
+        <p>{}</p>
+      </div>
+    );
+  }
+
 }
 
 export default App;
