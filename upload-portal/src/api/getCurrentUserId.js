@@ -7,11 +7,19 @@ var sdk = new BoxSDK({
 });
 
 // Create a basic API client, which does not automatically refresh the access token
-var client = sdk.getBasicClient('K7Tc36scaH1yPCtzmpF2igjEQ32TRpMC');
+var client = sdk.getBasicClient('b6su7o9DNVCdxCIMZcq8uUmXimdjMnK3');
 
-exports.handler = () => {
+exports.handler = async (event) => {
   console.log('getUser() Called in App.js');
-  client.users.get(client.CURRENT_USER_ID)
-    .then(user => console.log('Hello', user.name, '!'))
-    .catch(err => console.log('Got an error!', err));
+  return client.users.get(client.CURRENT_USER_ID).then( user =>{
+    console.log('got user in backend');
+    console.log(user);
+    return {
+      statusCode:200,
+      body:user.name
+    };
+  }).catch(err => {
+    console.log('Got an error!', err)
+    return {statusCode:400,body:String(err)};
+  });
 }
