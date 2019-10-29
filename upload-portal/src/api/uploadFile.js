@@ -8,7 +8,7 @@ exports.handler = async (event) =>{
   const arrayBuffer = event.body;
 
   const folderId = '0';
-  const fileName = 'agliberSample3.pdf';
+  const fileName = 'LoanApp.pdf';
 
 
   // get folder items
