@@ -5,15 +5,14 @@ import stream from 'stream';
 // Upload a new file to folder 123
 
 exports.handler = async (event) =>{
+
   const arrayBuffer = event.body;
-
   const folderId = '0';
-  const fileName = 'LoanApp.pdf';
-
+  const fileName = 'LoanApplication.pdf';
 
   // get folder items
   // check if file already exists
-  // else update
+  // else update file with a new version
   return BoxClient.folders.getItems(folderId)
     .then(items =>{
       // check if file already exists in the folder by that name
@@ -29,10 +28,11 @@ exports.handler = async (event) =>{
             }
           })
         	.catch(err => {
-            console.log('Got an error!', err);
+            console.log('Error returned from Box server: ', err);
             return {statusCode:err.statusCode,body:String(err)};
           });
       }else{
+        //if entry is defined, file already exists and should upload new version
         console.log('uploading new file version');
         return BoxClient.files.uploadNewFileVersion(entry.id,arrayBuffer)
           .then(fileObject => {
@@ -42,7 +42,7 @@ exports.handler = async (event) =>{
             }
           })
           .catch(err => {
-            console.log('Got an error!', err);
+            console.log('Error returned from Box server: ', err);
             return {statusCode:err.statusCode,body:String(err)};
           });
       }
