@@ -1,16 +1,16 @@
 # Upload-Portal
-## A demo React application for Bank of America Box integration
-## Checkout the demo here : https://youtu.be/juEI8EW9H-U
+### A React based demo application for Bank of America - Box integration
+### Checkout the demo here : https://youtu.be/juEI8EW9H-U
 ---
 
 ## Usage
 > First setup an account at netlify.com to host serverless functions
 
-1. npm install
+1. `npm install`
 2. Configure developer credentials in src/api/BoxClient.js
-3. npm run build
-4. npm run build:lambda
-5. npm start
+3. `npm run build`
+4. `npm run build:lambda`
+5. `npm start`
 
 ## Features
 - Mock Bank of America website
@@ -46,4 +46,4 @@ api/                      # Server side code (functions) hosted by netlify
 - [`files.uploadNewFileVersion(fileID, content, callback)`](http://opensource.box.com/box-node-sdk/jsdoc/Files.html#uploadNewFileVersion)
 
 ## Contributors
-- AG Liber
+AG Liber
