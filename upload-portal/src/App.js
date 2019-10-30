@@ -55,7 +55,7 @@ class App extends React.Component{
     var reader = new FileReader();
     // when reader loadend event is triggered upload array buffer to
     // api uploadFile.js function handler
-    reader.onloadend = event => {
+    reader.onload = event => {
       fetch('/.netlify/functions/uploadFile',{
         method: 'POST',
         headers: {
@@ -78,9 +78,11 @@ class App extends React.Component{
 
 
   render(){
+    // for each submitted file create ListGroupItem component
     const submittedItems = this.state.submittedFiles.map((fileName,index) =>
       <ListGroupItem key={fileName+index}> {fileName} </ListGroupItem>
     );
+    // If any files submitted add ListGroup header
     if(submittedItems.length > 0){
       submittedItems.unshift(<ListGroupItem className="text-success">Submitted Files</ListGroupItem>);
     }
@@ -88,9 +90,10 @@ class App extends React.Component{
 
       <div className="App">
         <header>
-          <img src={headerImage} alt="Logo" />
+          <img src={headerImage} alt="headerImage" />
         </header>
         <div className="sticky-top" style={{backgroundColor:'#E9090B'}}>
+          <img src={subHeaderImage} alt="subHeaderImage" />
         </div>
         <Container fluid>
           <Row>

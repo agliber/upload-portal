@@ -3,7 +3,6 @@ import BoxClient from './BoxClient.js';
 exports.handler = async (event) => {
   console.log('getUser() Called in App.js');
   return BoxClient.users.get(BoxClient.CURRENT_USER_ID).then( user =>{
-    console.log('got user in backend');
     console.log(user);
     return {
       statusCode:200,

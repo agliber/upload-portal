@@ -1,0 +1,59 @@
+
+Hi I'm AG,
+
+I'm going to walking you through a demo of how Box cloud solutions
+can help Bank of America improve there customer experience, speed up loan
+application processing, and improve record management and accessibility all
+while maintaining a strict level of security, compliance with privacy and
+governance regulations expected of financial institutions such as Bank of
+America.
+
+First we will securely login to a newly created Box account on the Box Web
+application which comes preloaded with files and tutorials to get you started
+quickly.
+
+Now let's take a look at what this will look like for a Bank of America
+customer.
+
+As you can see, with Box's white-label solution, Bank of America can offer
+its customers personalized, familiar, and branded user experiences.
+
+As a customer once I navigate to Bank of America's loan application portal
+I can easily get the content I need and upload it directly to Box web
+application.
+
+This content is then immediately available for a loan officer to review.
+
+
+Suppose the customer was not approved after the first submission. No problem.
+They can submit another file and Box's api integration supports handling
+versioning.
+
+Box's powerful version control makes iterating and collaborating on the same
+documents easy and compliant information governance policies.
+
+We also understand that Bank of America has more concerns than just an excellent
+user experience and enhancement of work processes, it has to be secure and
+compliant.
+
+Bank of America can feel at ease with this new loan application solution when
+it comes to PCIDSS, FINRA governance regulations, GDPR with Boxes
+SOC 1,2 & 3 audits, ISO 27001/27018 security key controls.
+
+Box offers products for Security & Compliance such as Box Shield, Box
+Governance, and Box Zones, to meet Bank of America's needs as a global
+financial institution.
+
+
+So what's going on behind the scenes, our demo utilizes Box's api integration
+and developer tools such as the Box SDK for node.
+
+As a developer who's personally passionate about good documentation I'm thankful
+to be able to report that Box api and developer documentation is verbose,
+accessible, and well maintained.
+
+For this demo we primarily leveraged Box's simple yet powerful file management
+API.
+
+Please let me know if you have any further questions I'd be happy to help.
+Thanks for watching:)

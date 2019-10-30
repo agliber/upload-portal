@@ -7,6 +7,6 @@ var sdk = new BoxSDK({
 });
 
 // Create a basic API client, which does not automatically refresh the access token
-var client = sdk.getBasicClient('5EyBWM1ZKUyWb2ikBzfYX5FWoSzNa32t');
+var client = sdk.getBasicClient('pt4cwEeIpSGJ2Sf3NCxcFqbh0nJuJuRv');
 
 export default client;
